@@ -1,0 +1,3 @@
+#!/bin/sh
+
+torrent-search-console -t30 "$@" 2>/dev/null | tail -n500 | grep ^result: | sort -r -n -k6 -t\| | column -t -s\|
